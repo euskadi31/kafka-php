@@ -6,6 +6,9 @@ php:
     - 7.0
     - nightly
     - hhvm
+branches:
+    except:
+        - /^v\d+\.\d+\.\d+*$/
 install:
     - git clone https://github.com/edenhill/librdkafka.git && cd librdkafka && ./configure && make && sudo make install && cd ../
     - git clone https://github.com/arnaud-lb/php-rdkafka.git && cd php-rdkafka/ && phpize && ./configure && make && sudo make install && cd ../

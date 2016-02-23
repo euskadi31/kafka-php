@@ -55,6 +55,10 @@ while (true) {
     // The second argument is the timeout.
     $msg = $topic->consume(0, 1000);
 
+    if (empty($msg)) {
+        continue;
+    }
+
     if ($msg->err) {
         echo $msg->errstr() . PHP_EOL;
         break;
