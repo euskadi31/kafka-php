@@ -1,0 +1,27 @@
+{
+    "name": "euskadi31/kafka-php",
+    "description": "A PHP 5.3+ framework for Apache Kafka",
+    "type": "library",
+    "require": {
+        "php": "^5.4",
+        "ext-zookeeper": "^0.2.3",
+        "ext-rdkafka": "^0.9.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7",
+        "leaphub/phpcs-symfony2-standard": "~2.0.1",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Axel Etcheverry",
+            "email": "axel@etcheverry.biz"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Euskadi31\\Kafka\\": "src/"
+        }
+    }
+}
