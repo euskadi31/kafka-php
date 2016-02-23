@@ -8,7 +8,7 @@ php:
     - hhvm
 install:
     - git clone https://github.com/edenhill/librdkafka.git && cd librdkafka && ./configure && make && sudo make install && cd ../
-    - git clone https://github.com/arnaud-lb/php-rdkafka.git cd php-rdkafka/ && phpize && ./configure && make && sudo make install && cd ../
+    - git clone https://github.com/arnaud-lb/php-rdkafka.git && cd php-rdkafka/ && phpize && ./configure && make && sudo make install && cd ../
     - echo "extension = rdkafka.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - apt install libzookeeper2 -q
     - git clone https://github.com/andreiz/php-zookeeper.git && cd php-zookeeper && phpize && ./configure && make && sudo make install && cd ../
