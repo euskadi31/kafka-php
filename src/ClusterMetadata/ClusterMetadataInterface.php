@@ -23,17 +23,4 @@ interface ClusterMetadataInterface
      * @return array
      */
     public function getBrokers();
-
-    /**
-     * @param string  $topicName
-     * @param integer $partitionId
-     * @return array
-     */
-    //public function getPartitionState($topicName, $partitionId = 0);
-
-    /**
-     * @param string $topicName
-     * @return array
-     */
-    //public function getTopicDetail($topicName);
 }
