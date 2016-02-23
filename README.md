@@ -1,7 +1,7 @@
 # Kafka PHP
 
 [![Build Status](https://img.shields.io/travis/euskadi31/kafka-php/master.svg)](https://travis-ci.org/euskadi31/kafka-php)
-[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/dc752865-d943-4c36-a1fe-a51eaef49a19.svg)](https://insight.sensiolabs.com/projects/dc752865-d943-4c36-a1fe-a51eaef49a19)
+[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/fe9e9f06-6ae2-416b-bfba-8962143e0443.svg)](https://insight.sensiolabs.com/projects/fe9e9f06-6ae2-416b-bfba-8962143e0443)
 [![Coveralls](https://img.shields.io/coveralls/euskadi31/kafka-php.svg)](https://coveralls.io/github/euskadi31/kafka-php)
 [![HHVM](https://img.shields.io/hhvm/euskadi31/kafka-php.svg)](https://travis-ci.org/euskadi31/kafka-php)
 [![Packagist](https://img.shields.io/packagist/v/euskadi31/kafka-php.svg)](https://packagist.org/packages/euskadi31/kafka-php)
