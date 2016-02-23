@@ -25,7 +25,12 @@ class ProducerTest extends \PHPUnit_Framework_TestCase
 
         $zookeeperMock->expects($this->once())
             ->method('getBrokers')
-            ->will($this->returnValue('127.0.0.1:9092'));
+            ->will($this->returnValue([
+                [
+                    'host' => '127.0.0.1',
+                    'port' => 9092
+                ]
+            ]));
 
         (new Producer($zookeeperMock));
     }
@@ -36,7 +41,12 @@ class ProducerTest extends \PHPUnit_Framework_TestCase
 
         $zookeeperMock->expects($this->once())
             ->method('getBrokers')
-            ->will($this->returnValue('127.0.0.1:9092'));
+            ->will($this->returnValue([
+                [
+                    'host' => '127.0.0.1',
+                    'port' => 9092
+                ]
+            ]));
 
         $confMock = $this->getMock('\RdKafka\Conf');
 

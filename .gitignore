@@ -1,6 +1,7 @@
 # directories
 vendor/
 build/
+dev/
 
 # files
 composer.phar

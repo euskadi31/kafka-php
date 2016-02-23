@@ -166,7 +166,7 @@ class Zookeeper implements ClusterMetadataInterface
     public function getBrokers()
     {
         $result = [];
-        $lists  = $this->zookeeper->getChildren(self::BROKER_PATH);
+        $lists  = $this->getZookeeper()->getChildren(self::BROKER_PATH);
 
         if (!empty($lists)) {
             foreach ($lists as $brokerId) {
@@ -194,8 +194,8 @@ class Zookeeper implements ClusterMetadataInterface
         $result = [];
         $path   = sprintf(self::BROKER_DETAIL_PATH, (int) $brokerId);
 
-        if ($this->zookeeper->exists($path)) {
-            $result = $this->zookeeper->get($path);
+        if ($this->getZookeeper()->exists($path)) {
+            $result = $this->getZookeeper()->get($path);
 
             if (empty($result)) {
                 return [];

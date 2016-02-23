@@ -31,7 +31,12 @@ class Producer extends \RdKafka\Producer
         }
 
         if (!empty($clusterMetadata)) {
-            $config->set('metadata.broker.list', $clusterMetadata->getBrokers());
+            $brokers = $clusterMetadata->getBrokers();
+            $brokers = array_map(function($broker) {
+                return sprintf('%s:%d', $broker['host'], $broker['port']);
+            }, $brokers);
+
+            $config->set('metadata.broker.list', implode(',', $brokers));
         }
 
         parent::__construct($config);
